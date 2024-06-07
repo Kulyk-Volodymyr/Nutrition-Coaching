@@ -1,0 +1,48 @@
+@import "../../scss";
+
+.blogs {
+  @include padding-inline;
+  margin-block: 3rem;
+  @include screen-min-1024 {
+    margin-block: 5rem;
+  }
+  @include screen-min-1280 {
+    margin-block: 6rem;
+  }
+  @include screen-min-1600 {
+    margin-block: 9rem;
+  }
+
+  &__inner {
+    @include max-width;
+  }
+
+  &__header {
+    @include home-h2;
+  }
+
+  &__text {
+    @include paragraph;
+    margin: 0 auto 3rem auto;
+    max-width: 800px;
+    text-align: center;
+    @include screen-min-1024 {
+      margin: 0 auto 3.75rem a;
+    }
+    @include screen-min-1600 {
+      margin: 0 auto 5rem auto;
+      max-width: 1000px;
+    }
+  }
+}
+
+.articles {
+  display: grid;
+  gap: 1rem;
+  margin: auto;
+  max-width: 640px;
+  @include screen-min-1024 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+}

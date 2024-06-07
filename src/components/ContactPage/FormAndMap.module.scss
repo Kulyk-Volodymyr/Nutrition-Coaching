@@ -1,0 +1,190 @@
+@import "../../scss";
+
+.container {
+  border: 1px solid $green85;
+  border-radius: 0.75rem;
+  background-color: $green95;
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 1.875rem;
+  @include screen-min-768 {
+    margin-top: 2.5rem;
+    margin-bottom: 4.5rem;
+    padding: 2.5rem;
+  }
+  @include screen-min-1024 {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  @include screen-min-1280 {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    padding: 3.75rem;
+  }
+  @include screen-min-1600 {
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 9rem;
+    padding: 5rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 540px;
+  width: 100%;
+  @include screen-min-1024 {
+    margin: 0;
+    max-width: none;
+  }
+
+  &__fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    @include screen-min-1600 {
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__inputWrapper {
+    flex: 1;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    background-color: $green90;
+    border: 1px solid $green80;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    transition: 0.4s;
+    width: 100%;
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+    }
+    &:focus,
+    &:hover {
+      background-color: $green95;
+      border: 1px solid $green70;
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 0.5rem;
+    resize: vertical;
+  }
+
+  &__textareaInfo {
+    align-self: flex-end;
+    font-size: 0.875rem;
+    @include screen-min-1600 {
+      font-size: 1rem;
+    }
+  }
+
+  &__button {
+    background-color: $green70;
+    border: 1px solid $green70;
+    border-radius: 0.5rem;
+    color: $gray15;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 46px;
+    margin-top: 2.5rem;
+    outline: none;
+    padding: 0.875rem;
+    transition: 0.4s;
+    width: 100%;
+    @include screen-min-768 {
+    }
+    @include screen-min-1024 {
+      height: 52px;
+      font-size: 1rem;
+      padding: 1rem 1.25rem;
+    }
+    @include screen-min-1280 {
+      font-size: 1.125rem;
+      height: 58px;
+      padding: 1.125rem 1.5rem;
+    }
+    &:hover {
+      background-color: $green80;
+    }
+  }
+}
+
+.map {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: inherit;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 540px;
+  width: 100%;
+  @include screen-min-1024 {
+    margin: 0;
+    max-width: none;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  @include screen-min-1024 {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: $green70;
+    border: 1px solid $green70;
+    border-radius: 0.5rem;
+    display: flex;
+    height: 46px;
+    justify-content: center;
+    transition: 0.4s;
+    @include screen-min-1024 {
+      height: 52px;
+    }
+    @include screen-min-1280 {
+      height: 58px;
+    }
+    &:hover {
+      background-color: $green80;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+}

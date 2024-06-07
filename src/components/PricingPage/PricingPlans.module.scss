@@ -1,0 +1,204 @@
+@import "../../scss";
+
+.pricing {
+  margin-block: 3rem;
+  @include screen-min-1024 {
+    margin-block: 5rem;
+  }
+  @include screen-min-1600 {
+    margin-block: 7rem;
+  }
+
+  &__buttons {
+    border: 1px solid $green80;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 2rem auto 1rem auto;
+    padding: 0.625rem;
+    width: fit-content;
+    @include screen-min-1024 {
+      margin: 2rem auto 1rem auto;
+    }
+  }
+
+  &__button {
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    outline: none;
+    padding: 0.625rem 1.5rem;
+    @include screen-min-1024 {
+      font-size: 1rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+    }
+
+    &Active {
+      background-color: $darkGreen20;
+      color: $white;
+      pointer-events: none;
+    }
+
+    &NotActive {
+      background-color: $green97;
+      color: $gray30;
+      transition: 0.4s;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $darkGreen40;
+      }
+    }
+  }
+
+  &__sale {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    @include screen-min-1024 {
+      margin-bottom: 2.5rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__plans {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+    max-width: 640px;
+    @include screen-min-1024 {
+      flex-direction: row;
+      gap: 2rem;
+      max-width: none;
+    }
+  }
+}
+
+.plan {
+  background-color: $green95;
+  border: 1px solid $green90;
+  border-radius: 0.75rem;
+  height: fit-content;
+  padding: 1.875rem;
+  @include screen-min-1024 {
+    flex: 1;
+  }
+  @include screen-min-1280 {
+    padding: 2.5rem;
+  }
+  @include screen-min-1600 {
+    padding: 3.125rem;
+  }
+
+  &__title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.5;
+    @include screen-min-768 {
+      font-size: 1.5rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__sale {
+    @include paragraph;
+    margin-bottom: 1.5rem;
+    @include screen-min-1024 {
+      margin-bottom: 2rem;
+    }
+    @include screen-min-1600 {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__info {
+    background-color: $green90;
+    border: 1px solid $green85;
+    border-radius: 0.5rem;
+    @include screen-min-1600 {
+      border-radius: 0.75rem;
+    }
+  }
+
+  &__item {
+    @include paragraph;
+    border-bottom: 1px solid $green85;
+    padding: 0.875rem 1.125rem;
+    @include screen-min-768 {
+      padding: 1rem 1.25rem;
+    }
+    @include screen-min-1600 {
+      padding: 1.25rem 1.5rem;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__advice {
+    @include paragraph;
+    background-color: $darkGreen20;
+    border: 1px solid $darkGreen20;
+    border-radius: 0.5rem;
+    color: $white;
+    margin-top: 1rem;
+    padding: 0.875rem 1.125rem;
+    @include screen-min-768 {
+      padding: 1rem 1.25rem;
+    }
+    @include screen-min-1600 {
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+    }
+  }
+
+  &__price {
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+    @include screen-min-768 {
+      margin-top: 1.5rem;
+    }
+
+    &Value {
+      color: $darkGreen25;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-right: 0.25rem;
+      @include screen-min-1600 {
+        font-size: 3.125rem;
+      }
+    }
+
+    &Period {
+      font-size: 1rem;
+      @include screen-min-1600 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__link {
+    @include button1;
+    display: block;
+    margin-top: 1rem;
+    max-width: none;
+    text-align: center;
+    width: 100% !important;
+    @include screen-min-768 {
+      margin-top: 1.5rem;
+    }
+  }
+}

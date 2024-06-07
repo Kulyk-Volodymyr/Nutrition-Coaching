@@ -1,0 +1,155 @@
+@import "../../scss";
+
+.testimonials {
+  @include padding-inline;
+
+  &__inner {
+    @include max-width;
+  }
+
+  &__header {
+    @include home-h2;
+  }
+
+  &__text {
+    @include paragraph;
+    margin: 0 auto 3rem auto;
+    max-width: 800px;
+    text-align: center;
+    @include screen-min-1024 {
+      margin: 0 auto 3.75rem auto;
+    }
+    @include screen-min-1600 {
+      margin: 0 auto 5rem auto;
+      max-width: 1000px;
+    }
+  }
+}
+
+.slider {
+  max-width: 640px;
+  @include screen-min-768 {
+    max-width: none;
+  }
+
+  &__slide {
+    border: 1px solid $green90;
+    border-radius: 0.75rem;
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__testimonal {
+    padding: 1.5rem;
+    @include screen-min-1280 {
+      padding: 1.875rem;
+    }
+    @include screen-min-1600 {
+      padding: 2.5rem;
+    }
+  }
+
+  &__quote {
+    color: $darkGreen30;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5rem;
+    @include screen-min-1600 {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+  }
+
+  &__message {
+    @include paragraph;
+  }
+
+  &__author {
+    align-items: center;
+    background-color: $green95;
+    border-top: 1px solid $green90;
+    display: flex;
+    gap: 0.75rem;
+    padding: 1.125rem 1.5rem;
+    @include screen-min-1280 {
+      padding: 1.25rem 1.875rem;
+    }
+    @include screen-min-1600 {
+      padding: 1.875rem 2.5rem;
+    }
+  }
+
+  &__avatar {
+    border-radius: 0.5rem;
+    display: block;
+    width: 40px;
+    @include screen-min-1280 {
+      width: 50px;
+    }
+    @include screen-min-1600 {
+      width: 60px;
+    }
+  }
+
+  &__name {
+    color: $darkGreen15;
+    font-size: 1rem;
+    font-weight: 600;
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+    }
+  }
+
+  & :global(.swiper-pagination) {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  & :global(.swiper-pagination-bullet) {
+    background: $green80;
+    opacity: 1;
+    &:hover {
+      background: $green70;
+    }
+  }
+
+  & :global(.swiper-pagination-bullet-active) {
+    background: $darkGreen30;
+    opacity: 1;
+  }
+
+  & :global(.swiper-button-prev),
+  & :global(.swiper-button-next) {
+    background-color: $green95;
+    border: 1px solid $green90;
+    border-radius: 0.5rem;
+    height: 3rem;
+    top: auto;
+    transform: translateY(100%);
+    transition: 0.4s;
+    width: 3rem;
+    z-index: 12;
+
+    &:hover {
+      background-color: $green70;
+    }
+  }
+
+  & :global(.swiper-button-prev) {
+    left: calc(50% - 140px);
+  }
+
+  & :global(.swiper-button-next) {
+    right: calc(50% - 140px);
+  }
+
+  & :global(.swiper-button-prev::after),
+  & :global(.swiper-button-next::after) {
+    font-size: 1.5rem;
+    color: $gray20;
+  }
+}

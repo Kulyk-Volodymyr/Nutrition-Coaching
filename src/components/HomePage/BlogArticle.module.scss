@@ -1,0 +1,151 @@
+@import "../../scss";
+
+.article {
+  background-color: $green95;
+  border: 1px solid $green90;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  @include screen-min-1024 {
+    padding: 1.875rem;
+  }
+  @include screen-min-1600 {
+    padding: 2.5rem 3.125rem;
+  }
+
+  &__image {
+    border-radius: 0.75rem;
+    display: block;
+    width: 100%;
+  }
+
+  &__category {
+    @include paragraph;
+    padding-top: 1.25rem;
+    padding-bottom: 0.125rem;
+    @include screen-min-1024 {
+      padding-top: 2.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    @include screen-min-768 {
+      font-size: 1.375rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.625rem;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    padding-block: 1.25rem;
+    @include screen-min-1600 {
+      padding-block: 2rem;
+    }
+  }
+}
+
+.author {
+  align-items: flex-end;
+  background-color: $green97;
+  border: 1px solid $green90;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem;
+  @include screen-min-576 {
+    align-items: center;
+    flex-direction: row;
+  }
+  @include screen-min-1600 {
+    padding: 1.25rem;
+  }
+
+  &__left {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    width: 100%;
+    @include screen-min-1280 {
+      gap: 1rem;
+    }
+
+    &Avatar {
+      border-radius: 0.5rem;
+      display: block;
+      width: 40px;
+      @include screen-min-768 {
+        width: 50px;
+      }
+      @include screen-min-1600 {
+        width: 60px;
+      }
+    }
+
+    &Info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      @include screen-min-768 {
+        gap: 0.5rem;
+      }
+    }
+
+    &Name {
+      font-size: 1rem;
+      font-weight: 600;
+      @include screen-min-768 {
+        font-size: 1.125rem;
+      }
+      @include screen-min-1600 {
+        font-size: 1.25rem;
+      }
+    }
+
+    &Date {
+      font-size: 0.875rem;
+      @include screen-min-768 {
+        font-size: 1rem;
+      }
+      @include screen-min-1600 {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    &Item {
+      aspect-ratio: 1;
+      align-items: center;
+      background-color: $green95;
+      border: 1px solid $green90;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      width: 48px;
+      @include screen-min-1600 {
+        width: 58px;
+      }
+    }
+
+    &Icon {
+      display: block;
+      height: 17px;
+      @include screen-min-1600 {
+        height: 20px;
+      }
+    }
+  }
+}

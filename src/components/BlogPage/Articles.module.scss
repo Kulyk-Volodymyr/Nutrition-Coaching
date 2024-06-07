@@ -1,0 +1,179 @@
+@import "../../scss";
+
+.tabs {
+  background-color: $darkGreen20;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  margin-bottom: 1.875rem;
+  @include screen-min-1024 {
+    margin-bottom: 3rem;
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    justify-content: center;
+    padding: 0.75rem;
+    @include screen-min-1024 {
+      padding: 1rem;
+    }
+    @include screen-min-1280 {
+      column-gap: 3rem;
+    }
+  }
+
+  &__item {
+    background-color: inherit;
+    border-radius: 0.5rem;
+    outline: 1px solid $darkGreen20;
+    color: $gray90;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    transition: 0.4s;
+    @include screen-min-1024 {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.125rem;
+    }
+
+    &:hover {
+      background-color: $darkGreen25;
+      border-radius: 0.5rem;
+      outline: 1px solid $darkGreen30;
+    }
+
+    &Active {
+      background-color: $darkGreen25;
+      border-radius: 0.5rem;
+      outline: 1px solid $darkGreen30;
+      pointer-events: none;
+    }
+  }
+}
+
+.articles {
+  background-color: $green85;
+  border: 1px solid $green85;
+  border-radius: 0.75rem;
+  display: grid;
+  gap: 1px;
+  @include screen-min-1024 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.article {
+  background-color: $green95;
+
+  &__top {
+    border-bottom: 1px solid $green85;
+    padding: 1.875rem 1.875rem 0 1.875rem;
+    margin: auto;
+    max-width: 680px;
+    @include screen-min-1024 {
+      max-width: none;
+      padding: 2.25rem 2.25rem 0 2.25rem;
+    }
+    @include screen-min-1600 {
+      padding: 3rem 3rem 0 3rem;
+    }
+
+    &Category {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      text-decoration: underline;
+      text-decoration-color: $green70;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 0.75rem;
+      @include screen-min-1024 {
+        font-size: 1.375rem;
+        margin-bottom: 3.75rem;
+      }
+      @include screen-min-1600 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &Image {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &Img {
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+      display: block;
+      max-width: 530px;
+      width: 87%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.875rem;
+    margin: auto;
+    max-width: 680px;
+    @include screen-min-1024 {
+      align-items: center;
+      flex-direction: row;
+      gap: 2.5rem;
+      justify-content: space-between;
+      max-width: none;
+      padding: 2.25rem;
+    }
+    @include screen-min-1600 {
+      gap: 3rem;
+      padding: 3rem;
+    }
+
+    &Title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      @include screen-min-1024 {
+        font-size: 1.25rem;
+      }
+      @include screen-min-1600 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &Text {
+      @include paragraph;
+    }
+
+    &Link {
+      background-color: $green70;
+      border: 1px solid $green70;
+      border-radius: 0.375rem;
+      color: $gray15;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 600;
+      min-width: fit-content;
+      padding: 0.875rem 1.25rem;
+      text-decoration: none;
+      transition: 0.4s;
+      width: fit-content;
+      @include screen-min-1600 {
+        font-size: 1.125rem;
+        padding: 1.125rem 1.5rem;
+      }
+      &:hover {
+        background-color: $green80;
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import "../../scss";
+
+.steps {
+  margin-block: 3rem;
+  @include screen-min-576 {
+    margin-block: 4rem;
+  }
+  @include screen-min-768 {
+    margin-block: 5rem;
+  }
+  @include screen-min-1280 {
+    margin-block: 6rem;
+  }
+  @include screen-min-1600 {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+  }
+
+  &__header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    @include screen-min-768 {
+      font-size: 2rem;
+    }
+    @include screen-min-1280 {
+      font-size: 2.5rem;
+    }
+    @include screen-min-1600 {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    margin: 0.25rem auto 4rem auto;
+    max-width: 980px;
+    text-align: center;
+    @include screen-min-1280 {
+      margin: 0.25rem auto 5rem auto;
+    }
+    @include screen-min-1600 {
+      margin: 0.75rem auto 6.5rem auto;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    row-gap: 2.75rem;
+    @include screen-min-768 {
+      column-gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include screen-min-1280 {
+      row-gap: 3.5rem;
+    }
+    @include screen-min-1600 {
+      row-gap: 4.5rem;
+    }
+  }
+}
+
+.step {
+  position: relative;
+  display: flex;
+
+  &__number {
+    color: $darkGreen40;
+    font-size: 5rem;
+    font-weight: 700;
+    position: absolute;
+    @include screen-min-1280 {
+      font-size: 6.25rem;
+    }
+    @include screen-min-1600 {
+      font-size: 9.375rem;
+    }
+  }
+
+  &__info {
+    border: 1px solid $green85;
+    border-radius: 0.75rem;
+    background-color: $green95;
+    margin-top: 3.5rem;
+    padding: 1.875rem;
+    position: relative;
+    @include screen-min-1024 {
+      padding: 2.125rem;
+    }
+    @include screen-min-1280 {
+      margin-top: 4.5rem;
+      padding: 2.5rem;
+    }
+    @include screen-min-1600 {
+      margin-top: 7rem;
+      padding: 3.125rem;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+    display: block;
+    height: 54px;
+    @include screen-min-1600 {
+      height: 66px;
+    }
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5;
+    @include screen-min-1024 {
+      font-size: 1.25rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    margin-top: 1rem;
+    @include screen-min-1024 {
+      margin-top: 1.25rem;
+    }
+    @include screen-min-1600 {
+      margin-top: 1.5rem;
+    }
+  }
+}

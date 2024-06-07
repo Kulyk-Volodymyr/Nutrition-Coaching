@@ -1,0 +1,66 @@
+@import "../../scss";
+
+.hero {
+  border: 1px solid $green85;
+  border-radius: 0.75rem;
+  background-color: $green95;
+  background-image: url("../../assets/images/abstract1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 1.875rem;
+  text-align: center;
+  @include screen-min-576 {
+    padding: 2.25rem;
+  }
+  @include screen-min-768 {
+    padding: 3rem;
+  }
+  @include screen-min-1024 {
+    padding: 4rem;
+  }
+  @include screen-min-1280 {
+    padding: 5rem;
+  }
+  @include screen-min-1600 {
+    padding: 6.25rem;
+  }
+
+  &__img {
+    display: block;
+    height: 68px;
+    margin: auto;
+    @include screen-min-1024 {
+      height: 76px;
+    }
+    @include screen-min-1600 {
+      height: 102px;
+    }
+  }
+
+  &__header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    @include screen-min-768 {
+      font-size: 2rem;
+      margin-top: 2.5rem;
+    }
+    @include screen-min-1280 {
+      font-size: 2.5rem;
+      margin-top: 3.25rem;
+    }
+    @include screen-min-1600 {
+      font-size: 3rem;
+      margin-top: 4.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    margin: auto;
+    max-width: 1120px;
+  }
+}

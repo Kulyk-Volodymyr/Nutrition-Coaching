@@ -1,0 +1,71 @@
+@import "../../scss";
+
+.questions {
+  background-color: $green95;
+  border: 1px solid $green85;
+  border-radius: 0.75rem;
+  height: fit-content;
+  margin: auto;
+  max-width: 640px;
+  padding: 0.625rem 1.875rem;
+  width: 100%;
+  @include screen-min-1024 {
+    margin: 0;
+    max-width: none;
+    padding: 1.875rem 3.125rem;
+  }
+  @include screen-min-1600 {
+    padding: 2.5rem 3.75rem;
+  }
+
+  &__item {
+    border-bottom: 1px solid $green85;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &[open] summary::after {
+      content: "\2715";
+      font-size: 1.375rem;
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 1.25rem 3.5rem 1.25rem 0;
+    position: relative;
+    list-style: none;
+    @include screen-min-768 {
+      font-size: 1.125rem;
+    }
+    @include screen-min-1600 {
+      font-size: 1.25rem;
+    }
+
+    &::after {
+      align-items: center;
+      background-color: $darkGreen20;
+      border-radius: 0.5rem;
+      color: $white;
+      content: "\002B";
+      display: flex;
+      font-size: 2rem;
+      font-weight: 500;
+      height: 40px;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+    }
+  }
+
+  &__answer {
+    @include paragraph;
+    padding-bottom: 1.75rem;
+  }
+}
